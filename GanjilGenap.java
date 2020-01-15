@@ -1,35 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package ganjilgenap;
+public class OddEvenTester {
 
-import javax.swing.JOptionPane;
+    public static void main(String[] args) 
+    {
+       int angka;
+       perhitungan(20);
+    }
+    
+    public static String perhitungan(int nilai){
+        String pesan="", jumlah="";
 
-/**
- *
- * @author Vahdaputra
- */
-public class GanjilGenap {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        int Nilai = Integer.parseInt(JOptionPane.showInputDialog("Masukan Angka"));
-        
-        int Hasil = Nilai / 2;
-        
-        String ket;
-        
-        if(Hasil%2 == 1)
-            ket=("Ganjil");
-        else
-            ket=("Genap");
-        
-        JOptionPane.showMessageDialog(null, "Bilangan tersebut adalah bilangan \n"+ket);
+        if (nilai>2) {
+            jumlah = " Lebih besar dari 2";
+            if(nilai%2 == 0){
+                pesan = "Bilangan Genap";
+            }else{
+                pesan = "Bilangan Ganjil";
+            }
+        }
+        else{
+            jumlah = "Lebih Kecil dari 2";
+        }
+        System.out.println(pesan + jumlah);
+        return pesan;
     }
     
 }
